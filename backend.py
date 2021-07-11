@@ -7,5 +7,7 @@ import cgi
 
 form = cgi.FieldStorage()
 command = form.getvalue("cmd")
-output = subprocess.getoutput("sudo "+command)
+cmd = str(command)
+print(type(cmd))
+output = subprocess.getoutput("sudo " +cmd)
 print(output)

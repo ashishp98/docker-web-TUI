@@ -1,10 +1,11 @@
-function lw() {
-    var cmd = document.getElementById("input").value
-    var xhr = new XMLHttpRequest()
-    xhr.open("GET","http://192.168.1.207/cgi-bin/linux.py?cmd="+cmd,true)
+function backend() {
+
+    var command = document.getElementById("input").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","http://192.168.99.101//cgi-bin/backend.py?cmd="+command,true);
     xhr.send();
     xhr.onload = function() {
         var output = xhr.responseText;
-        document.getElementById("output").innerHTML=output;
+        document.getElementById("div3").innerHTML=output;
         }
-    }
+}
