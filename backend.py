@@ -2,7 +2,6 @@
 print("content-type:text/plain")
 print()
 
-
 import subprocess
 import cgi
 
